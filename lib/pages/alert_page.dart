@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AlertPage extends StatelessWidget {
+  const AlertPage({super.key});
+
   showMyAlert(BuildContext context1) {
     showDialog(
         context: context1,
         builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("Titulo del Alert 1"),
-            backgroundColor: Colors.white,
-            content: Text("Este es el contenido del alter 1"),
-            actions: [
+          var actions2 = [
               /*ElevatedButton(
                 onPressed: () {},
                 child: Text("No"),
@@ -23,18 +21,23 @@ class AlertPage extends StatelessWidget {
               ),*/
               TextButton(
                 onPressed: () {},
-                child: Text("Aceptar"),
+                child: const Text("Aceptar"),
               ),
               TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text(
+                child: const Text(
                   "Cancelar",
                   style: TextStyle(color: Colors.red),
                 ),
               ),
-            ],
+            ];
+          return AlertDialog(
+            title: const Text("Titulo del Alert 1"),
+            backgroundColor: Colors.white,
+            content: const Text("Este es el contenido del alter 1"),
+            actions: actions2,
           );
         });
   }
@@ -43,7 +46,7 @@ class AlertPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Alert Page"),
+        title: const Text("Alert Page"),
         backgroundColor: Colors.black45,
       ),
       body: Center(
@@ -54,7 +57,7 @@ class AlertPage extends StatelessWidget {
               onPressed: () {
                 showMyAlert(context);
               },
-              child: Text("Alert 1"),
+              child: const Text("Alert 1"),
             ),
           ],
         ),

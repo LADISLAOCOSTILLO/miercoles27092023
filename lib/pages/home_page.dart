@@ -2,9 +2,11 @@
 //import 'package:app_components/pages/avatar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:miercoles27092023/pages/card_pag.dart';
 
 import 'alert_page.dart';
 import 'avatar_page.dart';
+import 'john_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,7 +27,7 @@ class HomePage extends StatelessWidget {
                 width: 200,
                 decoration: BoxDecoration(
                   //color: Colors.redAccent,
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://malditopaparazzo.com.ar/wp-content/uploads/2021/05/David-Chicle-768x770.jpg"),
                   ),
@@ -33,7 +35,7 @@ class HomePage extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.5),
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                       blurRadius: 12.0,
                     ),
                   ],
@@ -49,18 +51,26 @@ class HomePage extends StatelessWidget {
                   letterSpacing: 1,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 160.0,
                 child: Divider(),
               ),
               ItemComponentWidget(
                 titulo: "Avatar",
-                irPagina: AvatarPage(),
+                irPagina: const AvatarPage(),
               ),
               ItemComponentWidget(
                 titulo: "Alert",
-                irPagina: AlertPage(),
+                irPagina: const AlertPage(),
               ),
+              ItemComponentWidget(
+                titulo: 'Card',
+                irPagina: CardPage(),
+                 ),
+                 ItemComponentWidget(
+                  titulo: 'Jhon', 
+                  irPagina: JohnPage()
+                 ),
             ],
           ),
         ),
@@ -74,12 +84,12 @@ class ItemComponentWidget extends StatelessWidget {
   String titulo;
   Widget irPagina;
 
-  ItemComponentWidget({required this.titulo, required this.irPagina});
+  ItemComponentWidget({super.key, required this.titulo, required this.irPagina});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(
+      margin: const EdgeInsets.symmetric(
         horizontal: 12.0,
         vertical: 5.0,
       ),
@@ -89,7 +99,7 @@ class ItemComponentWidget extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.5),
-            offset: Offset(5, 5),
+            offset: const Offset(5, 5),
             blurRadius: 12.0,
           ),
         ],
@@ -108,11 +118,11 @@ class ItemComponentWidget extends StatelessWidget {
           style: GoogleFonts.poppins(),
         ),
         subtitle: Text("Ir a detalle del $titulo"),
-        leading: Icon(
+        leading: const Icon(
           Icons.check_circle_outline,
           color: Colors.black,
         ),
-        trailing: Icon(Icons.chevron_right),
+        trailing: const Icon(Icons.chevron_right),
       ),
     );
   }
