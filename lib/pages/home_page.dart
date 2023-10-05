@@ -1,7 +1,10 @@
-import 'package:app_components/pages/alert_page.dart';
-import 'package:app_components/pages/avatar_page.dart';
+//import 'package:app_components/pages/alert_page.dart';
+//import 'package:app_components/pages/avatar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'alert_page.dart';
+import 'avatar_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -66,6 +69,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class ItemComponentWidget extends StatelessWidget {
   String titulo;
   Widget irPagina;
