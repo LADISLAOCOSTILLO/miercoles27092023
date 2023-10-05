@@ -63,6 +63,8 @@ flutter:
   assets:
      - assets/image/imagex1.png
      - assets/image/ramo.jpg
+     - assets/image/DOE.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
