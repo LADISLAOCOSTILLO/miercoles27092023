@@ -1,17 +1,16 @@
-// ignore_for_file: use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
 
 class JohnPage extends StatelessWidget {
-  const JohnPage({super.key});
- @override
+  const JohnPage({Key? key});
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 77, 230, 6),
+        backgroundColor: Colors.transparent, // Establecemos el fondo del AppBar como transparente
         title: Text("JOHN DOEgg"),
+        elevation: 0, // Eliminamos la sombra del AppBar
       ),
-          body: Column(
+      body: Column(
         children: [
           Container(
             decoration: BoxDecoration(
@@ -22,37 +21,46 @@ class JohnPage extends StatelessWidget {
                   color: Color.fromARGB(255, 12, 12, 12).withOpacity(0.5),
                   offset: Offset(4, 4),
                   blurRadius: 12.0,
-                  ),
-                 ],  
                 ),
-                child: Row(  
-                  children: [
-                    Image.asset( 
-                      "assets/image/JOHN.jpg",
-                      //width:200,
-                      height: 120,
-                    ),
-                    Text(
-                       "JOHN DOE",
-                       style: TextStyle (
-                        color: Color.fromARGB(255, 92, 82, 230),
-                        fontSize: 18.0,
-                       ),
-                    ),
-                    ElevatedButton(
-                      onPressed: (){  
-                        
-                      },
-                      child: Text("PRESIONAR"),
-                    ),
+              ],
+            ),
+            child: Row(
+              children: [
+                ClipOval(  
+                child: Image.asset(
+                  "assets/image/DOE2.jpg",
+                  height: 80,
+                  width: 80,
+                  fit: BoxFit.cover,
 
-                  ],
-                )
-                
                 ),
-                 ], 
                 ),
-                
-            );
-                  }
-                   }
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "JOHN DOE\nCEO at APPLE inc",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 92, 82, 230),
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("SETTINGS"),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
