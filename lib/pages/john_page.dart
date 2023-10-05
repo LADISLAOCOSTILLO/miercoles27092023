@@ -28,9 +28,9 @@ class JohnPage extends StatelessWidget {
                 child: Row(  
                   children: [
                     Image.asset( 
-                      "assets/image/doe.jpg",
-                      width:200,
-                      height: 200,
+                      "assets/image/JOHN.jpg",
+                      //width:200,
+                      height: 120,
                     ),
                     Text(
                        "JOHN DOE",
