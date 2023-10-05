@@ -86,10 +86,10 @@ class JohnPage extends StatelessWidget {
               children: [
                 ClipOval(
                   child: Image.asset(
-                    "assets/image/DOE2.jpg",
-                    height: 80,
-                    width: 80,
-                    fit: BoxFit.cover,
+                    "assets/image/quimis.jpg",
+                    height: 30,
+                    width: 50,
+                    //fit: BoxFit.cover,
                   ),
                 ),
                 Expanded(
@@ -97,7 +97,7 @@ class JohnPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "JOHN DOE\nCEO at APPLE inc",
+                        "JOHN DOE\nLa Química es la ciencia que estudia la materia, la energía y sus cambios. El objeto de estudio de la Química son las sustancias y sus interacciones",
                         style: TextStyle(
                           color: Color.fromARGB(255, 92, 82, 230),
                           fontSize: 18.0,
