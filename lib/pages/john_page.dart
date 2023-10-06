@@ -39,6 +39,8 @@ class JohnPage extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+                SizedBox(width: 20),
+                SizedBox(height: 60),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,9 +91,11 @@ class JohnPage extends StatelessWidget {
                     "assets/image/quimis.jpg",
                     height: 30,
                     width: 50,
-                    //fit: BoxFit.cover,
+                    fit: BoxFit.cover,
                   ),
                 ),
+                SizedBox(width: 20),
+                SizedBox(height: 30),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
