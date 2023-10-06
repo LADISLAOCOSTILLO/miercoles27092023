@@ -7,6 +7,7 @@ import 'package:miercoles27092023/pages/card_pag.dart';
 import 'alert_page.dart';
 import 'avatar_page.dart';
 import 'john_page.dart';
+import 'input_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -71,6 +72,10 @@ class HomePage extends StatelessWidget {
                   titulo: 'Jhon', 
                   irPagina: JohnPage()
                  ),
+                 ItemComponentWidget( 
+                  titulo: 'input', 
+                  irPagina: InputPage()
+                  ),
             ],
           ),
         ),

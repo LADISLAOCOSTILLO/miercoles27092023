@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class JohnPage extends StatelessWidget {
-  const JohnPage({Key? key});
+    const JohnPage({Key? key});
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +70,7 @@ class JohnPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20.0,),
+          SizedBox(height: 20.15,),
           // Segundo Container (con la misma estructura de hijos)
           Container(
             //width: double.infinity,
@@ -114,8 +118,55 @@ class JohnPage extends StatelessWidget {
               ],
             ),
           ),
-        ],
-      ),
-    );
+//******************************************************* */
+
+SizedBox(height: 20.15,),
+          // Segundo Container (con la misma estructura de hijos)
+          Container(
+            //width: double.infinity,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 243, 242, 242),
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(20.0),
+                bottom: Radius.circular(20.0),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Color.fromARGB(255, 12, 12, 12).withOpacity(0.5),
+                  offset: Offset(8, 4),
+                  blurRadius: 20.0,
+                ),
+              ],
+            ),
+           
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "JOHN DOE",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                        ),
+                      ),
+
+
+
+
+
+
+
+                      
+                    ],
+                  ),
+                ),
+                
+              ],
+            ),
+          );
+
+   
+      
+    
   }
 }
